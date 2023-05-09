@@ -3,7 +3,7 @@
 #import cv2
 import numpy as np
 import cv2 as cv
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import streamlit as st
 from PIL import Image
 #import webbrowser
