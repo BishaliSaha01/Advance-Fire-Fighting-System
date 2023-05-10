@@ -25,9 +25,9 @@ def color_assigning(sensor_data,axis):
     #cv2.waitKey(0)
     #var1 = Image.open("image_processing.jpg")
     cv.imwrite('image_processing.jpg', i1_img)
-    st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")   
+    #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")   
     #cv.imwrite('image_processing.jpg', i1_img)
-    st.image(i1_img)
+    #st.image(i1_img)
 
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
 cred = credentials.Certificate('firebase-sdk.json')
@@ -37,16 +37,22 @@ if not firebase_admin._apps:
 ref = db.reference('/')
 ref.set(
   {
-    'sensorNo' : '2', 'sensorData':'10' 
+    'sensorNo' :[2,3] , 'sensorData':[10 ,200]
 }
 )
 
-ref = db.reference('sensorNo')    
-input1 =int(ref.get())
+ref = db.reference('sensorNo')   
+i1 = ref.get() 
 ref = db.reference('sensorData')
-sensor_data = int(ref.get())
-d1 = {1:[237,170],2:[572,170],3:[960,170]}
-color_assigning(sensor_data,d1.get(input1,-1))
+i2 = ref.get()
+for i in range(0,len(i1)):
+    input1 = i1[i]
+    sensor_data = i2[i]
+    d1 = {1:[237,170],2:[572,170],3:[960,170]}
+    color_assigning(sensor_data,d1.get(input1,-1))
+st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")  
+var1 = Image.open("image_processing.jpg") 
+st.image(var1)
 
 
 #var1 = Image.open("image_processing.jpg")
