@@ -36,7 +36,7 @@ if not firebase_admin._apps:
 ref = db.reference('/')
 ref.set(
   {
-    'sensorNo' : '3', 'sensorData':'100' 
+    'sensorNo' : '2', 'sensorData':'10' 
 }
 )
 
