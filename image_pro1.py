@@ -28,8 +28,8 @@ def color_assigning(sensor_data,axis):
     st.image(i1_img)
 
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
+cred = credentials.Certificate('firebase-sdk.json')
 if not firebase_admin._apps:   
-    cred = credentials.Certificate('firebase-sdk.json')
     firebase_admin.initialize_app(cred)
 firebase_admin.initialize_app(cred)
 ref = db.reference('/')
