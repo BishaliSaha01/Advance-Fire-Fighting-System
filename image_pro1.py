@@ -30,7 +30,7 @@ def color_assigning(sensor_data,axis):
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
     
 cred = credentials.Certificate('firebase-sdk.json')
-firebase_admin.initialize_app(cred,{
+firebase_admin.initialize_app(cred,name='sec',{
     'databaseURL': 'https://advance-fire-fighting-system-default-rtdb.asia-southeast1.firebasedatabase.app'})
 ref = db.reference('/')
 ref.set(
