@@ -1,3 +1,4 @@
+firebase_admin
 numpy
 opencv-python-headless
-firebase_admin
+
