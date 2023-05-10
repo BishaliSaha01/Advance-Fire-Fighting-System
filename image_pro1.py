@@ -14,7 +14,7 @@ from firebase_admin import db
 
 def color_assigning(sensor_data,axis):
     input_img = "image_processing.jpg"
-    i1_img = cv.imread(input_img)
+    i1_img = Image.open('path/to/image.jpg')#cv.imread(input_img)
     if sensor_data<15:
         cv.circle(i1_img,(axis[0],axis[1]),100,(0,0,150),-1)
     elif sensor_data>15 and sensor_data<40:
@@ -26,6 +26,7 @@ def color_assigning(sensor_data,axis):
     #var1 = Image.open("image_processing.jpg")
     st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")   
     st.image(i1_img)
+    i1_image.save('image_processing.jpg')
 
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
 cred = credentials.Certificate('firebase-sdk.json')
