@@ -24,8 +24,9 @@ def color_assigning(sensor_data,axis):
    # cv2.imshow("Drawing Shapes", i1_img)
     #cv2.waitKey(0)
     #var1 = Image.open("image_processing.jpg")
-    st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")   
     cv.imwrite('image_processing.jpg', i1_img)
+    st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")   
+    #cv.imwrite('image_processing.jpg', i1_img)
     st.image(i1_img)
 
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
