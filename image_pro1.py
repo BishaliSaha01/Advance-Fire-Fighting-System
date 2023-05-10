@@ -36,7 +36,7 @@ firebase_admin.initialize_app(cred, {
 ref = db.reference('/')
 ref.set(
   {
-    'sensorNo' : '2', 'sensorData':'10' 
+    'sensorNo' : '1', 'sensorData':'100' 
 }
 )
 
