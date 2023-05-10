@@ -31,7 +31,7 @@ def color_assigning(sensor_data,axis):
 cred = credentials.Certificate('firebase-sdk.json')
 if not firebase_admin._apps:   
     firebase_admin.initialize_app(cred)
-firebase_admin.initialize_app(cred)
+#firebase_admin.initialize_app(cred)
 ref = db.reference('/')
 ref.set(
   {
