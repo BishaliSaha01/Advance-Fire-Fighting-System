@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "advance-fire-fighting-system",
+  "private_key_id": "f9703f08673bf814f21ebf48eb7ee7b391478a4d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC/VtxMVJcmRhwf\ndKhovUr1/n8T2EH88F+hoYigoU0YYFQDuA1rkG7+LYJU6abeKXkQ38ZI977yKppJ\nc1XSQp+duuVYOKkEgAfJdF+rYWOX5IB/25g0gys6qFoKvRclzrAjE3B4beW5Ot3q\nr78DhKhPWrR32f15VUAtkjBAt+z1p4DtCJj44J6ef93ECSOZOMIvd1AeNsNkU0gg\nlAeMX7al9o7BYGPSVySbJ/+4o8qOtwx+g01Wi52rC3+tY2/NSer729M7L2yF6ynV\nnzTjKmI9NOWv1CHYr/qLo1DVUW9d+ECivDOS95A/8QbG9EQoDh2E5dbzvzGnA4Id\np3IwJB7bAgMBAAECggEAQ6yJm1e55Bgc/0UoAW+eETZzpMWyxS8Ra93xsHqMhYgg\nfvY8jORXVYAsHjNLyTza7IxxGcLCXu2Rh1QLMSRORx/g2RylLwnHd0m5Qqjd7E2t\n40r8YOpZwlPkEPNDOiSJ6MYJ3BZmj2aSMdz6Dtj/HJ4EwXUw8RalbdjMRz+mSFXb\nNRDH/1mQK3y37/QuGTGYcSff9ahw1To0Ijfvd45LHQi+Ha21wxj+EaoCgcBXHG7F\nd04do1HKNqOQOtCGr2mXhXGM7RI0sHjmzqCQSWROKDKzXKccRmZrKb5uJFLM+yhU\nfQHxvmGLkAt58hiqZV6fTio9VCaqW8eOpYxSWuKbTQKBgQDeEpJoSrvOqsg1jtWl\n9s+yXm1qbVIZCugtLLRpBqB0rC5ZjeGAHJewWzmFNLEV0mexAWwS5I3uthtkhX9Z\ni9NBHxB+FWwAHHamTzCkru/9PIFJNZ4uqvwi1haeG8mFcLpIGcRh+K1SvPMWCUwx\nNpZJyLFWUq9/TV3HRnLm3gD/twKBgQDckkml5Zik49TdSNeO03/6IkmjRq0j/oYc\nKEWr5xO+ikOxG3zGceDRIUyq4XvC0zS8gYTBMmB9iNscx9pZ9/jakTN/cKn5hEfU\nydBxn30fkUtdLc6WcJ4QC0eNKRQRPqPlg1u6S7Zp6gBMZteQd1c0u8vDs7h67kge\nop+8NLXR/QKBgQCufN04wO/MNPhWzMImQ0VymytRolANiTpgtG2U0DYnNlq81vRG\nGzE8ypDpjztNMCN1Ou7V8WtsEv52/0XO8ESvOF9XEjHn7HV1u2c3HpVG3tGe2lhN\nxt+R57GhzaeMB8T2ffiGGkTla718pRWO3Zs8okpkz1dBqWJz/3Cs4ebbBQKBgGM3\nyrk9VjSV56LCqXQt31t9IPK5UBjo3Rq9Ytm40EDdoSWB39bEUwS/neUgGLPCne5N\ntJHTP2Q4s5d2rtnZma93sVqaK1t6DXXCcmkp/Pa+PNBlUpCJiBBfgogU+lnne4I6\nXIConh12jTvQ5xatGCU4dKhLp6hklzxwmrnmXANhAoGBAJSdUvZoMPalv9e46TmA\nfaLj/M3Ma/S3gZ0q1AOP9TT6VMHhg/8dur6PF3fbkA7MPz64rDTIMvOtg0F64xCd\nDkbcNnG4CCStOj8eg60VKzyhefA+XLP4oOFORKnswR0n2IaDrLBBuUz7WRL40sKc\nFaQI58xXDZhq0IGCJuVH+3MJ\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-wvbz2@advance-fire-fighting-system.iam.gserviceaccount.com",
+  "client_id": "106013001777165326806",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-wvbz2%40advance-fire-fighting-system.iam.gserviceaccount.com"
+}
