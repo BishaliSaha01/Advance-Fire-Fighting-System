@@ -13,8 +13,8 @@ from firebase_admin import db
 #import webbrowser
 
 def color_assigning(sensor_data,axis):
-    input_img = "image_processing.jpg"
-    i1_img = Image.open('path/to/image.jpg')#cv.imread(input_img)
+    #input_img = "image_processing.jpg"
+    i1_img = Image.open('image_processing.jpg')#cv.imread(input_img)
     if sensor_data<15:
         cv.circle(i1_img,(axis[0],axis[1]),100,(0,0,150),-1)
     elif sensor_data>15 and sensor_data<40:
