@@ -7,8 +7,8 @@ import cv2 as cv
 import streamlit as st
 from PIL import Image
 import firebase_admin
-#from firebase_admin import credentials
-#from firebase_admin import db
+from firebase_admin import credentials
+from firebase_admin import db
 
 #import webbrowser
 
