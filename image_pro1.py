@@ -6,6 +6,10 @@ import cv2 as cv
 #import matplotlib.pyplot as plt
 import streamlit as st
 from PIL import Image
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+
 #import webbrowser
 
 def color_assigning(sensor_data,axis):
@@ -25,8 +29,21 @@ def color_assigning(sensor_data,axis):
 
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
     
-input1 = 2 # int(input("Enter the sensor no: "))
-sensor_data = 10 #int (input("Enter the sensor data: "))
+cred = credentials.Certificate('firebase-sdk.json')
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://advance-fire-fighting-system-default-rtdb.asia-southeast1.firebasedatabase.app'
+})
+ref = db.reference('/')
+ref.set(
+  {
+    'sensorNo' : '2', 'sensorData':'10' 
+}
+)
+
+ref = db.reference('sensorNo')    
+input1 =int(ref.get())
+ref = db.reference('sensorData')
+sensor_data = int(ref.get())
 d1 = {1:[237,170],2:[572,170],3:[960,170]}
 color_assigning(sensor_data,d1.get(input1,-1))
 
