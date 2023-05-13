@@ -63,10 +63,10 @@ ref.set(
 }
 )      
 ss = ""
-ref = db.reference('sensorNo')   
-i1 = ref.get() 
-ref = db.reference('sensorData')
-i2 = ref.get()
+ref1= db.reference('sensorNo')   
+i1 = ref1.get() 
+ref2 = db.reference('sensorData')
+i2 = ref2.get()
 for i in range(0,len(i1)):
     input1 = i1[i]
     sensor_data = i2[i]
