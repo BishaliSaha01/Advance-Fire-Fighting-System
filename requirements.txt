@@ -1,5 +1,5 @@
 firebase_admin
-twilio.rest
+twilio
 numpy
 opencv-python-headless
 
