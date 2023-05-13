@@ -40,10 +40,10 @@ def color_assigning(sensor_data,axis):
 def fire_call(sensor_data):
     if sensor_data>=300 :
         ss = "HIGH"
-        ent_sms(sensor_no,ss)
+        ent_sms(ss)
     elif sensor_data>=100 and sensor_data<300: 
         ss = "MEDIUM"
-        sent_sms(sensor_no,ss)
+        sent_sms(ss)
     else:                          
         ss = "LOW"
         
