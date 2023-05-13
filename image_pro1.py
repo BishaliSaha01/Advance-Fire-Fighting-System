@@ -53,19 +53,20 @@ def sent_sms(sensor_no,ss):
         location = location_list[0]
         #cl.messages.create(body='\nURGENT !!! \nFIRE EMERGENCY AT \nAddress: '+address+'\nLocation: '+location+'\nTime: '+ time+'\nDate: '+date+'\nEvent: Fire Detected'+'\nUrgency: '+ss+'\nBluePrint: '+b_link+'\n*Requesting immediate help from the nearest firefighters and rescue teams. Please respond as soon as possible to help contain the fire*', from_='+12706122154', to='+916290499469')
 
+dbURL = 'https://advance-fire-fighting-system-default-rtdb.asia-southeast1.firebasedatabase.app'
 cred = credentials.Certificate('firebase-sdk.json')
 if not firebase_admin._apps:   
     firebase_admin.initialize_app(cred)
-ref = db.reference('/')
+ref = db.reference('/', url= dbURL)
 ref.set(
   {
     'sensorNo' :[2,3,1] , 'sensorData':[10 ,200,35]
 }
 )      
 ss = ""
-ref1= db.reference('sensorNo')   
+ref1= db.reference('sensorNo', url = dbURL)   
 i1 = ref1.get() 
-ref2 = db.reference('sensorData')
+ref2 = db.reference('sensorData', url = dbURL)
 i2 = ref2.get()
 for i in range(0,len(i1)):
     input1 = i1[i]
