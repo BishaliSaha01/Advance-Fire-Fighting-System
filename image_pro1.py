@@ -1,6 +1,5 @@
 #Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
 #Type "help", "copyright", "credits" or "license()" for more information.
-#import cv2
 import numpy as np
 import cv2 as cv
 #import matplotlib.pyplot as plt
@@ -9,8 +8,18 @@ from PIL import Image
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
-
+import datetime #time
+from twilio.rest import Client #date
 #import webbrowser
+
+SID = 'AC57837e1f65a82cdf45cb90736e1a7ce4'
+AUTH_TOKEN = '3117d74a9a3d534c485f474a5062f54d'
+address_list = ["1A, Cathedral Road, Kolkata-700071"] 
+location_list = ["https://goo.gl/maps/1R5ZQjyYZhB9XZY19"] 
+b_link = "https://shorturl.at/sRY58"
+now = datetime.datetime.now()
+date = now.strftime("%d/%m/%Y")
+time = now.strftime("%H:%M")
 
 def color_assigning(sensor_data,axis):
     #input_img = "image_processing.jpg"
@@ -25,22 +34,35 @@ def color_assigning(sensor_data,axis):
     #cv2.waitKey(0)
     #var1 = Image.open("image_processing.jpg")
     cv.imwrite('image_processing.jpg', i1_img)
-    #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")   
-    #cv.imwrite('image_processing.jpg', i1_img)
     #st.image(i1_img)
+    
+    
+def fire_call(sensor_data):
+    if sensor_data>=300 :
+        ss = "HIGH"
+        ent_sms(sensor_no,ss)
+    elif sensor_data>=100 and sensor_data<300: 
+        ss = "MEDIUM"
+        sent_sms(sensor_no,ss)
+    else:                          
+        ss = "LOW"
+        
+def sent_sms(sensor_no,ss):
+        cl = Client(SID, AUTH_TOKEN)
+        address = address_list[0]
+        location = location_list[0]
+        #cl.messages.create(body='\nURGENT !!! \nFIRE EMERGENCY AT \nAddress: '+address+'\nLocation: '+location+'\nTime: '+ time+'\nDate: '+date+'\nEvent: Fire Detected'+'\nUrgency: '+ss+'\nBluePrint: '+b_link+'\n*Requesting immediate help from the nearest firefighters and rescue teams. Please respond as soon as possible to help contain the fire*', from_='+12706122154', to='+916290499469')
 
-#st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
 cred = credentials.Certificate('firebase-sdk.json')
 if not firebase_admin._apps:   
     firebase_admin.initialize_app(cred)
-#firebase_admin.initialize_app(cred)
 ref = db.reference('/')
 ref.set(
   {
     'sensorNo' :[2,3,1] , 'sensorData':[10 ,200,35]
 }
-)
-
+)      
+ss = ""
 ref = db.reference('sensorNo')   
 i1 = ref.get() 
 ref = db.reference('sensorData')
@@ -50,6 +72,8 @@ for i in range(0,len(i1)):
     sensor_data = i2[i]
     d1 = {1:[237,170],2:[572,170],3:[960,170]}
     color_assigning(sensor_data,d1.get(input1,-1))
+    fire_call(sensor_data)
+ 
 st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")  
 var1 = Image.open("image_processing.jpg") 
 st.image(var1)
