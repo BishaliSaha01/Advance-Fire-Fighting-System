@@ -47,7 +47,7 @@ def fire_call(sensor_data):
     else:                          
         ss = "LOW"
         
-def sent_sms(sensor_no,ss):
+def sent_sms(ss):
         cl = Client(SID, AUTH_TOKEN)
         address = address_list[0]
         location = location_list[0]
