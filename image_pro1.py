@@ -57,12 +57,7 @@ dbURL = 'https://advance-fire-fighting-system-default-rtdb.asia-southeast1.fireb
 cred = credentials.Certificate('firebase-sdk.json')
 if not firebase_admin._apps:   
     firebase_admin.initialize_app(cred)
-#ref = db.reference('/', url= dbURL)
-#ref.set(
- # {
-  #  'sensorNo' :[1,3,1,2,3,2] , 'sensorData':[15,100,35,10,32,150]
-#}
-#)      
+ref = db.reference('/', url= dbURL)    
 ss = ""
 ref1= db.reference('sensorNo', url = dbURL)   
 i1 = ref1.get() 
