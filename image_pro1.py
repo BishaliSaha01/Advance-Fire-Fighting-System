@@ -60,7 +60,7 @@ if not firebase_admin._apps:
 ref = db.reference('/', url= dbURL)
 ref.set(
   {
-    'sensorNo' :[1,2] , 'sensorData':[100,10]
+    'sensorNo' :[1,2] , 'sensorData':[100,100]
 }
 )      
 ss = ""
