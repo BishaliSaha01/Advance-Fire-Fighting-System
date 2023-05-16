@@ -10,7 +10,7 @@ from firebase_admin import credentials
 from firebase_admin import db
 import datetime #time
 from twilio.rest import Client #date
-#import webbrowser
+import time
 
 SID = 'AC57837e1f65a82cdf45cb90736e1a7ce4'
 AUTH_TOKEN = '3117d74a9a3d534c485f474a5062f54d'
@@ -20,7 +20,7 @@ b_link = "https://shorturl.at/sRY58"
 now = datetime.datetime.now()
 date = now.strftime("%d/%m/%Y")
 time = now.strftime("%H:%M")
-refresh_button = st.button("")
+refresh_placeholder = st.empty()
 
 
         
@@ -78,8 +78,8 @@ while True:
     st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
     var1 = Image.open("image_processing.jpg") 
     st.image(var1)
-    if refresh_button:
-        st.experimental_rerun()
+    time.sleep(5)
+    refresh_placeholder.empty()
         
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")  
 #var1 = Image.open("image_processing.jpg") 
