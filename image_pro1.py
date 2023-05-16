@@ -20,7 +20,14 @@ b_link = "https://shorturl.at/sRY58"
 now = datetime.datetime.now()
 date = now.strftime("%d/%m/%Y")
 time = now.strftime("%H:%M")
+refresh_button = st.button("Refresh")
 
+while True:
+    # Your Streamlit app code here
+
+    if refresh_button:
+        st.experimental_rerun()
+        
 def color_assigning(sensor_data,axis):
     #input_img = "image_processing.jpg"
     i1_img = cv.imread('image_processing.jpg')
