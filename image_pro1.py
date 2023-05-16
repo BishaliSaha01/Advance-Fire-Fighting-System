@@ -20,7 +20,7 @@ b_link = "https://shorturl.at/sRY58"
 now = datetime.datetime.now()
 date = now.strftime("%d/%m/%Y")
 time = now.strftime("%H:%M")
-refresh_interval = 60
+refresh_interval = 6000
 
 
         
