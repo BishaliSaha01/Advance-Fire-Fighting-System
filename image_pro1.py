@@ -22,11 +22,7 @@ date = now.strftime("%d/%m/%Y")
 time = now.strftime("%H:%M")
 refresh_button = st.button("")
 
-while True:
-    # Your Streamlit app code here
 
-    if refresh_button:
-        st.experimental_rerun()
         
 def color_assigning(sensor_data,axis):
     #input_img = "image_processing.jpg"
@@ -76,10 +72,17 @@ for i in range(0,len(i1)):
     d1 = {1:[237,170],2:[572,170],3:[960,170]}
     color_assigning(sensor_data,d1.get(input1,-1))
     fire_call(sensor_data)
- 
-st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")  
-var1 = Image.open("image_processing.jpg") 
-st.image(var1)
+    
+st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
+while True:
+    var1 = Image.open("image_processing.jpg") 
+    st.image(var1)
+    if refresh_button:
+        st.experimental_rerun()
+        
+#st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide")  
+#var1 = Image.open("image_processing.jpg") 
+#st.image(var1)
 
 
 #var1 = Image.open("image_processing.jpg")
