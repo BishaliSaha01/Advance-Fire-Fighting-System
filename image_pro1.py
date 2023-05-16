@@ -73,8 +73,9 @@ for i in range(0,len(i1)):
     color_assigning(sensor_data,d1.get(input1,-1))
     fire_call(sensor_data)
     
-st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
+
 while True:
+    st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
     var1 = Image.open("image_processing.jpg") 
     st.image(var1)
     if refresh_button:
