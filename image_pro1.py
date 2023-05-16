@@ -20,7 +20,7 @@ b_link = "https://shorturl.at/sRY58"
 now = datetime.datetime.now()
 date = now.strftime("%d/%m/%Y")
 time = now.strftime("%H:%M")
-refresh_button = st.button("Refresh")
+refresh_button = st.button("")
 
 while True:
     # Your Streamlit app code here
