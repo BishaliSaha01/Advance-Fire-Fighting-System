@@ -82,7 +82,7 @@ if __name__ == '__main__':
     #main()
     while True:
         # Clear the Streamlit cache
-        st.experimental_rerun()
+       # st.experimental_rerun()
         # Run the app
         main()
         st.balloons()
