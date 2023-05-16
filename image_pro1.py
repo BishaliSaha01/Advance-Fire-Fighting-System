@@ -79,14 +79,14 @@ def main():
 if __name__ == '__main__':
         
     st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide") 
-    #main()
-    while True:
+    main()
+    #while True:
         # Clear the Streamlit cache
         #st.experimental_rerun()
         # Run the app
-        main()
+        #main()
         # Wait for the refresh interval 
-        time.sleep(240)
+        #time.sleep(240)
         
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide", reload=True)  
 #var1 = Image.open("image_processing.jpg") 
