@@ -82,13 +82,13 @@ if __name__ == '__main__':
     #main()
     while True:
         # Clear the Streamlit cache
-        st.experimental_rerun()
+        #st.experimental_rerun()
         # Run the app
         main()
         #st.balloons()
         # Wait for the refresh interval 
-        time.sleep(20)
-        #st.experimental_rerun()
+        time.sleep(200)
+        st.experimental_rerun()
         
         
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide", reload=True)  
