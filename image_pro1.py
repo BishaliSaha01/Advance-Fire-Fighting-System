@@ -57,6 +57,7 @@ def sent_sms(ss):
    #cl.messages.create(body='\nURGENT !!! \nFIRE EMERGENCY AT \nAddress: '+address+'\nLocation: '+location+'\nTime: '+ time1+'\nDate: '+date+'\nEvent: Fire Detected'+'\nUrgency: '+ss+'\nBluePrint: '+b_link+'\n*Requesting immediate help from the nearest firefighters and rescue teams. Please respond as soon as possible to help contain the fire*', from_='+12706122154', to='+916290499469')
 
 def main():
+    st.experimental_rerun()
     dbURL = 'https://advance-fire-fighting-system-default-rtdb.asia-southeast1.firebasedatabase.app'
     cred = credentials.Certificate('firebase-sdk.json')
     if not firebase_admin._apps:   
@@ -82,13 +83,13 @@ if __name__ == '__main__':
     #main()
     while True:
         # Clear the Streamlit cache
-        st.experimental_rerun()
+        #st.experimental_rerun()
         # Run the app
         main()
         #st.balloons()
         # Wait for the refresh interval 
         time.sleep(200)
-        st.experimental_rerun()
+        
         
         
 #st.set_page_config(page_title="Building's website", page_icon=":tada:", layout="wide", reload=True)  
