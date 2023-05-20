@@ -21,9 +21,7 @@ now = datetime.datetime.now()
 date = now.strftime("%d/%m/%Y")
 time1 = now.strftime("%H:%M")
 
-
-
-        
+     
 def color_assigning(sensor_data,axis):
     #input_img = "image_processing.jpg"
     i1_img = cv.imread('image_processing.jpg')
@@ -32,7 +30,7 @@ def color_assigning(sensor_data,axis):
     elif sensor_data>15 and sensor_data<40:
        i1_img = cv.circle(i1_img,(axis[0],axis[1]),90,(0,20,180),-1)
     else:
-       i1_img = cv.circle(i1_img,(axis[0],axis[1]),90,(1,100,255),-1)
+       i1_img = cv.circle(i1_img,(axis[0],axis[1]),90,(2,100,255),-1)
    # cv2.imshow("Drawing Shapes", i1_img)
     #cv2.waitKey(0)
     #var1 = Image.open("image_processing.jpg")
