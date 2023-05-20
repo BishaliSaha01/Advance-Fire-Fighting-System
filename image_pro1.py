@@ -26,11 +26,11 @@ def color_assigning(sensor_data,axis):
     #input_img = "image_processing.jpg"
     i1_img = cv.imread('image_processing.jpg')
     if sensor_data<15:
-       i1_img= cv.circle(i1_img,(axis[0],axis[1]),90,(255, 153, 0),-1)
+       i1_img= cv.circle(i1_img,(axis[0],axis[1]),90,(0, 153, 255),-1)
     elif sensor_data>15 and sensor_data<40:
-       i1_img = cv.circle(i1_img,(axis[0],axis[1]),90,(255, 0, 0),-1)
+       i1_img = cv.circle(i1_img,(axis[0],axis[1]),90,(0, 0, 255),-1)
     else:
-       i1_img = cv.circle(i1_img,(axis[0],axis[1]),90,(140, 0, 26),-1)
+       i1_img = cv.circle(i1_img,(axis[0],axis[1]),90,(26, 0, 140),-1)
    # cv2.imshow("Drawing Shapes", i1_img)
     #cv2.waitKey(0)
     #var1 = Image.open("image_processing.jpg")
