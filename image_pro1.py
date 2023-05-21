@@ -13,7 +13,8 @@ from twilio.rest import Client #date
 import time
 
 SID = 'AC57837e1f65a82cdf45cb90736e1a7ce4'
-AUTH_TOKEN = '3117d74a9a3d534c485f474a5062f54d'
+#AUTH_TOKEN = '3117d74a9a3d534c485f474a5062f54d'
+AUTH_TOKEN = 'ed739cf8c69047e962df34b8414fa17e'
 address_list = ["1A, Cathedral Road, Kolkata-700071"] 
 location_list = ["https://goo.gl/maps/1R5ZQjyYZhB9XZY19"] 
 b_link = "https://shorturl.at/sRY58"
