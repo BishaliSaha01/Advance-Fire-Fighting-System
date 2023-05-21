@@ -39,10 +39,10 @@ def color_assigning(sensor_data,axis):
     
     
 def fire_call(sensor_data):
-    if sensor_data>=40 :
+    if sensor_data>40 :
         ss = "HIGH"
         sent_sms(ss)
-    elif sensor_data>=15 and sensor_data<40: 
+    elif sensor_data>15 and sensor_data<40: 
         ss = "MEDIUM"
         sent_sms(ss)
     else:                          
@@ -52,7 +52,7 @@ def sent_sms(ss):
     cl = Client(SID, AUTH_TOKEN)
     address = address_list[0]
     location = location_list[0]
-    #cl.messages.create(body='\nURGENT !!! \nFIRE EMERGENCY AT \nAddress: '+address+'\nLocation: '+location+'\nTime: '+ time1+'\nDate: '+date+'\nEvent: Fire Detected'+'\nUrgency: '+ss+'\nBluePrint: '+b_link+'\n*Requesting immediate help from the nearest firefighters and rescue teams. Please respond as soon as possible to help contain the fire*', from_='+12706122154', to='+916290499469')
+    cl.messages.create(body='\nURGENT !!! \nFIRE EMERGENCY AT \nAddress: '+address+'\nLocation: '+location+'\nTime: '+ time1+'\nDate: '+date+'\nEvent: Fire Detected'+'\nUrgency: '+ss+'\nBluePrint: '+b_link+'\n*Requesting immediate help from the nearest firefighters and rescue teams. Please respond as soon as possible to help contain the fire*', from_='+12706122154', to='+916290499469')
 
 def main():
     dbURL = 'https://advance-fire-fighting-system-default-rtdb.asia-southeast1.firebasedatabase.app'
