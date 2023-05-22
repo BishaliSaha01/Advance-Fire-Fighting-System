@@ -88,7 +88,7 @@ if __name__ == '__main__':
         main()
         #st.balloons()
         # Wait for the refresh interval 
-        time.sleep(60)
+        time.sleep(10)
         #st.experimental_rerun()
         
         
