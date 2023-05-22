@@ -26,9 +26,9 @@ time1 = now.strftime("%H:%M")
 def color_assigning(sensor_data,axis):
     #input_img = "image_processing.jpg"
     i1_img = cv.imread('image_processing.jpg')
-    if sensor_data<15:
+    if sensor_data<475:
        i1_img= cv.circle(i1_img,(axis[0],axis[1]),90,(0, 153, 255),-1)
-    elif sensor_data>15 and sensor_data<40:
+    elif sensor_data>475 and sensor_data<650:
        i1_img = cv.circle(i1_img,(axis[0],axis[1]),90,(0, 0, 255),-1)
     else:
        i1_img = cv.circle(i1_img,(axis[0],axis[1]),90,(26, 0, 140),-1)
@@ -40,10 +40,10 @@ def color_assigning(sensor_data,axis):
     
     
 def fire_call(sensor_data):
-    if sensor_data>40 :
+    if sensor_data>650 :
         ss = "HIGH"
         sent_sms(ss)
-    elif sensor_data>15 and sensor_data<40: 
+    elif sensor_data>475 and sensor_data<650: 
         ss = "MEDIUM"
         sent_sms(ss)
     else:                          
