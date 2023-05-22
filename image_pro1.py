@@ -62,15 +62,16 @@ def main():
         firebase_admin.initialize_app(cred)
     ref = db.reference('/', url= dbURL)    
     ss = ""
-    ref1= db.reference('sensorNo', url = dbURL)   
+    ref1= db.reference('sensorNo1', url = dbURL)   
     i1 = ref1.get() 
-    ref2 = db.reference('sensorData', url = dbURL)
+    ref2 = db.reference('sensorNo2', url = dbURL)
     i2 = ref2.get()
     for i in range(0,len(i1)):
-        input1 = i1[i]
-        sensor_data = i2[i]
+        sensor_data1 = i1[i]
+        sensor_data2 = i2[i]
         d1 = {1:[237,170],2:[572,170],3:[960,170]}
-        color_assigning(sensor_data,d1.get(input1,-1))
+        color_assigning(sensor_data1,d1.get(1,-1))
+        color_assigning(sensor_data2,d1.get(2,-1))
         fire_call(sensor_data)
     var1 = Image.open("image_processing.jpg") 
     st.image(var1)
