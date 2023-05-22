@@ -66,14 +66,14 @@ def main():
     i1 = ref1.get() 
     ref2 = db.reference('sensorNo2', url = dbURL)
     i2 = ref2.get()
-    for i in range(0,len(i1)):
-        sensor_data1 = i1[i]
-        sensor_data2 = i2[i]
-        d1 = {1:[237,170],2:[572,170],3:[960,170]}
-        color_assigning(sensor_data1,d1.get(1,-1))
-        color_assigning(sensor_data2,d1.get(2,-1))
-        fire_call(sensor_data1)
-        fire_call(sensor_data2)
+   # for i in range(0,len(i1)):
+    sensor_data1 = i1
+    sensor_data2 = i2
+    d1 = {1:[237,170],2:[572,170],3:[960,170]}
+    color_assigning(sensor_data1,d1.get(1,-1))
+    color_assigning(sensor_data2,d1.get(2,-1))
+    fire_call(sensor_data1)
+    fire_call(sensor_data2)
     var1 = Image.open("image_processing.jpg") 
     st.image(var1)
      
