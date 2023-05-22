@@ -72,7 +72,8 @@ def main():
         d1 = {1:[237,170],2:[572,170],3:[960,170]}
         color_assigning(sensor_data1,d1.get(1,-1))
         color_assigning(sensor_data2,d1.get(2,-1))
-        fire_call(sensor_data)
+        fire_call(sensor_data1)
+        fire_call(sensor_data2)
     var1 = Image.open("image_processing.jpg") 
     st.image(var1)
      
